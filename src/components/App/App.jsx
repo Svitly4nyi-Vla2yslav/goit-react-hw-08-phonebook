@@ -1,30 +1,36 @@
-import { Filter } from '../Filter/Filter';
-import { ContactList } from '../ContactList/ContactList';
-import { ContactForm } from '../ContactForm/ContactForm';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectError, selectIsLoading} from 'redux/selector';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { Layout } from 'components/Layout';
+import { lazy } from 'react';
+import { useDispatch } from 'react-redux';
+const Home = lazy(() => import('pages/Home'))
+const Register = lazy(() => import('pages/Register'))
+const Login = lazy(() => import('pages/Login'))
+const ContactsPage = lazy(() => import('pages/ContactsPage'))
 
 export function App() {
-  const dispatch = useDispatch()
-  const isLoading = useSelector(selectIsLoading)
-  const error = useSelector(selectError)
+const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchContacts())
-  },[dispatch])
 
   return (
-    <div>
-      <h1 className='Phonebook__title'>Phonebook</h1>
-      <ContactForm />
-      <h2 className='Phonebook__title'>Contacts</h2>
-      <Filter />
-      <ContactList />
-      {isLoading && !error}
-    </div>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='/register'
+          element={<RestrictedRouter
+            redirectTo='/contacts'
+            component={<Register />} />} />
+        <Route path='/login'
+          elenent={<RestrictedRouter
+            redirectTo='/contacts'
+            component={<Login />} />} />
+        <Route path='/contacts'
+          element={<PrivateRoute
+            redirectTo='/contacts'
+            component={<ContactsPage />} />} />
+      </Route>
+    </Routes>
   );
 }
 
