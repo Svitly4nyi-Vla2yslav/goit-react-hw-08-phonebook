@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+  }
+
+.app-bar_link{
+    margin-left: 100px;
+    font-family: Arial Black,Gadget,sans-serif;
+    text-shadow: 4px 4px 7px #336dce;
+   
+    text-decoration: none;
+}
