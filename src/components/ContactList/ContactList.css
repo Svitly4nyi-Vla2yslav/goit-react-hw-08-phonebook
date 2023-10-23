@@ -27,3 +27,7 @@
     text-shadow: 4px 4px 7px #336dce;
     margin-left: 17px;
 }
+
+.log{
+    display: flex;
+}
