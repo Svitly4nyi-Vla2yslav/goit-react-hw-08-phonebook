@@ -1,15 +1,32 @@
 .header {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  
-  }
+  /* padding: 10px 20px; */
+  border-bottom: 1px solid #336dce;
+  position: fixed;
+  width: 97%;
 
-.app-bar_link{
-    margin-left: 100px;
-    font-family: Arial Black,Gadget,sans-serif;
-    text-shadow: 4px 4px 7px #336dce;
-   
-    text-decoration: none;
+}
+
+.active {
+  text-decoration: none;
+
+  color: wheat;
+}
+
+.app-bar_link {
+
+  font-family: Arial Black, Gadget, sans-serif;
+  text-shadow: 4px 4px 7px #336dce;
+
+  text-decoration: none;
+}
+
+.app-bar_link-log {
+  font-family: Arial Black, Gadget, sans-serif;
+  text-shadow: 4px 4px 7px #336dce;
+
+  text-decoration: none;
+  margin-left: 100px;
 }

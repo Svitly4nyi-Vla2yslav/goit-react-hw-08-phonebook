@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logIn } from 'redux/auth/auth-operations';
+import '../RegisterForm/RegisterForm.css'
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const LoginForm = () => {
                     Password
                     <input type="password" name="password" className='input' />
                 </label>
-                <button type="submit" className='button-login'>
+                <button type="submit" className='button'>
                     Log In
                 </button>
             </form>

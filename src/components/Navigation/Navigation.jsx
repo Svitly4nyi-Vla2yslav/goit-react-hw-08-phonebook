@@ -8,11 +8,11 @@ export const Navigation = () => {
 
     
     <nav>
-        <NavLink  className='title-bar' to='/'>
+        <NavLink  className='app-bar_link' to='/'>
         Home
         </NavLink>
         {isLoggeIn && (
-        <NavLink  className='title-bar' to='/contacts'>
+        <NavLink  className='Phonebook__title-header' to='/contacts'>
             Phonebook
         </NavLink>
         )}

@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom'
 
 export const AuthNav = () => {
     return (
-        <div className='header'>
+        <div className='heade'>
             <NavLink className='app-bar_link' to='/register'>
                 Register
             </NavLink>
-            <NavLink className='app-bar_link' to='/login'>
+            <NavLink className='app-bar_link-log' to='/login'>
                 Log In
             </NavLink>
         </div>

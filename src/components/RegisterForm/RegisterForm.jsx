@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { register } from 'redux/auth/auth-operations'
+import './RegisterForm.css'
 
 export const RegisterForm = () => {
 
@@ -33,7 +34,7 @@ export const RegisterForm = () => {
                     Password
                     <input type="password" name='password' className='input'/>
                 </label>
-                <button type='submit'> Register</button>
+                <button type='submit' className='button'> Register</button>
             </form>
     
     )

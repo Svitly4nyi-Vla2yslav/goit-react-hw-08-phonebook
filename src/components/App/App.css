@@ -1,7 +1,6 @@
 body{
     display: flex;
     font-size: 40px;
-    align-items: center;
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
@@ -9,6 +8,18 @@ body{
 }
 
 .Phonebook__title{
+    padding-top: 100px;
+    text-align: center;
+    color: black;
     font-family: Arial Black,Gadget,sans-serif;
     text-shadow: 4px 4px 7px #336dce;
+   
+}
+.Phonebook__title-header{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-family: Arial Black,Gadget,sans-serif;
+    text-shadow: 4px 4px 7px #336dce;
+    margin-left: 100px; 
 }
